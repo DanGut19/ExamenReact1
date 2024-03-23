@@ -16,3 +16,19 @@ function onFocus(id){
         document.getElementById(id).focus();
     }
 }
+/*
+function alerta(){
+
+    if (Resultado === 59){
+        error("Reprobado")
+    } else if (Resultado === 79){
+        error("Bueno")
+    } else if (Resultado === 89){
+        error("Muy Bueno")
+    } else if (Resultado === 100){
+        error("Sobresaliente")
+    } else {
+        document.getElementById('Resultado').value = Resultado
+    }
+}
+*/
