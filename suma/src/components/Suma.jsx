@@ -9,11 +9,11 @@ const Suma = () => {
 
     const sumar = () => {
         if (n1.trim() === "") {
-            alert("Ingrese nota del primer parcial","warning","txtN1");
+            alerta("Ingrese nota del primer parcial","warning","txtN1");
         } else if (n2.trim() === "") {
-            alert("Ingrese nota del segundo parcial","warning","txtN2");
+            alerta("Ingrese nota del segundo parcial","warning","txtN2");
         } else if (n3.trim() === "") {
-            alert("Ingrese nota del tercer parcial","warning","txtN3");
+            alerta("Ingrese nota del tercer parcial","warning","txtN3");
         } else {
             let valor1 = parseInt(n1);
             let valor2 = parseInt(n2);
@@ -27,6 +27,23 @@ const Suma = () => {
         setN2("");
         setN3("");
         setResultado("");
+    }
+
+    const Error = () => {
+        if (resultado.trim() <= "59") {
+            Error("Reprobado","warning","txtResultado");
+        } else if (resultado.trim() <= "79") {
+            Error("Bueno","warning","txtResultado");
+        } else if (resultado.trim() <= "89") {
+            Error("Muy Bueno","warning","txtResultado");
+        } else if (resultado.trim() <= "100") {
+            Error("Sobresaliente","warning","txtResultado");
+        } else {
+            let valor1 = parseInt(n1);
+            let valor2 = parseInt(n2);
+            let valor3 = parseInt(n3);
+            setResultado(valor1 + valor2 + valor3);
+        }
     }
 
     return (
